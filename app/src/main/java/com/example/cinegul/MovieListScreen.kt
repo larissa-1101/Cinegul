@@ -1,5 +1,7 @@
 package com.example.cinegul
 
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.Image
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -24,11 +26,12 @@ import androidx.navigation.NavController
 fun MovieListScreen(navController: NavController) {
     val movies = MovieData.movies
 
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
+    Box(modifier = Modifier.statusBarsPadding()) {
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
         items(movies) { movie ->
             Card(
                 modifier = Modifier
@@ -52,7 +55,7 @@ fun MovieListScreen(navController: NavController) {
                     Text(
                         text = "${movie.title} (${movie.year})",
                         modifier = Modifier.padding(top = 8.dp)
-                    )
+                    ) }
                 }
             }
         }

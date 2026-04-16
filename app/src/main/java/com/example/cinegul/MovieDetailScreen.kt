@@ -1,5 +1,6 @@
 package com.example.cinegul
 
+import androidx.compose.foundation.layout.statusBarsPadding
 import android.content.Intent
 import androidx.core.net.toUri
 import androidx.compose.foundation.layout.Column
@@ -25,6 +26,7 @@ fun MovieDetailScreen(movieId: Int, navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .statusBarsPadding()
             .padding(16.dp)
     ) {
         // Movie title
