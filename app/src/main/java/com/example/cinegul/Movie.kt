@@ -9,10 +9,10 @@ data class Movie(
 
 object MovieData {
     val movies = listOf(
-        Movie(1, "Inception", android.R.drawable.ic_menu_camera, "2010"),
-        Movie(2, "The Dark Knight", android.R.drawable.ic_menu_gallery, "2008"),
-        Movie(3, "Interstellar", android.R.drawable.ic_menu_slideshow, "2014"),
-        Movie(4, "The Matrix", android.R.drawable.ic_menu_manage, "1999"),
-        Movie(5, "Parasite", android.R.drawable.ic_menu_help, "2019")
+        Movie(1, "Inception", R.drawable.inception, "2010"),
+        Movie(2, "The Dark Knight", R.drawable.dark_knight, "2008"),
+        Movie(3, "Interstellar", R.drawable.interstellar, "2014"),
+        Movie(4, "The Matrix", R.drawable.matrix, "1999"),
+        Movie(5, "Parasite", R.drawable.parasite, "2019")
     )
 }
